@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  freemarker:
+    enabled: true
+    cache: false
+    template-loader-path: classpath:/templates/
+    suffix: .html
+
+  security:
+    user:
+      name: user
+      password: admin
+      roles: user, admin
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: jason
+    url:  jdbc:mysql://localhost:3306/springsecurity_demos?useSSL=false
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org.springframework.*: debug
